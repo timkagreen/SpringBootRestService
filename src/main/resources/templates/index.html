@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+<h1>Create a Person:</h1>
+
+<form th:action="@{/index}"
+      th:object="${helloWorldRequest}" method="POST">
+    Name:
+    <input type="text" th:field="*{name}" />
+    <br/>
+    Age:
+    <input type="text" th:field="*{age}" />
+    <br/>
+    <input type="submit" value="Create" />
+</form>
+
+<br/>
+
+</body>
+</html>
